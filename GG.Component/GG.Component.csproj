@@ -136,6 +136,54 @@
     <Compile Include="Control\GGComboBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Control\GGComboBoxEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGDateEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGFontEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGGroupControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGHyperLinkEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGMemoEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGPictureEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGRadioGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGTimeEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\GGTreeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="IGGControl.cs" />
     <Compile Include="Libraries\Class\Functions.cs" />
     <Compile Include="Libraries\Control\ComboBase.cs">
