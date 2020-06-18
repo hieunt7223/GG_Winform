@@ -1,0 +1,7 @@
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\GG.Component.dll
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\GG.Component.pdb
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\obj\Debug\GG.Component.Properties.Resources.resources
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\obj\Debug\GG.Component.csproj.GenerateResource.cache
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\obj\Debug\GG.Component.csproj.CoreCompileInputs.cache
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\obj\Debug\GG.Component.dll
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\obj\Debug\GG.Component.pdb
