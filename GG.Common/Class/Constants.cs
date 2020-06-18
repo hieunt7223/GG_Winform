@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GG.Common.Class
+namespace GG.Common
 {
     public class TableName
     {
