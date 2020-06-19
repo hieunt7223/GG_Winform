@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace GG.Studio
 {
-    public partial class frmAddModule : Form
+    public partial class frmAddModule : DevExpress.XtraEditors.XtraForm
     {
         #region parameter
         public STModules objSTModules { get; set; }
