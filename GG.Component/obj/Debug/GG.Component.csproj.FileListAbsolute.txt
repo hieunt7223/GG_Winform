@@ -74,7 +74,6 @@ E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\Microsoft.Extensi
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.xml
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\Microsoft.Extensions.Configuration.xml
-E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\DevExpress.Printing.v19.1.Core.xml
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\DevExpress.Xpf.Core.v19.1.xml
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\DevExpress.PivotGrid.v19.1.Core.xml
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\DevExpress.Mvvm.v19.1.xml
@@ -109,10 +108,6 @@ E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\System.Memory.xml
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\Microsoft.Identity.Client.xml
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\System.Numerics.Vectors.xml
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\System.Buffers.xml
-E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
-E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
-E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
-E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\de\DevExpress.Xpf.Core.v19.1.resources.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\es\DevExpress.Xpf.Core.v19.1.resources.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\bin\Debug\ja\DevExpress.Xpf.Core.v19.1.resources.dll
