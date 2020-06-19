@@ -12,10 +12,10 @@ namespace GG.Entity
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //#region ST
-            //modelBuilder.Configurations.Add(new STSystemsConfiguration());
-            //modelBuilder.Configurations.Add(new STModulesConfiguration());
-            //#endregion
+            #region ST
+            modelBuilder.ApplyConfiguration(new STSystemsConfiguration());
+            modelBuilder.ApplyConfiguration(new STModulesConfiguration());
+            #endregion
 
             #region AD
             modelBuilder.ApplyConfiguration(new ADConfigColumnsConfiguration());
@@ -24,10 +24,10 @@ namespace GG.Entity
             #endregion
         }
 
-        //#region ST
-        //public DbSet<STSystems> STSystems { get; set; }
-        //public DbSet<STModules> STModules { get; set; }
-        //#endregion
+        #region ST
+        public DbSet<STSystems> STSystems { get; set; }
+        public DbSet<STModules> STModules { get; set; }
+        #endregion
 
         #region AD
         public DbSet<ADConfigColumns> ADConfigColumns { get; set; }
