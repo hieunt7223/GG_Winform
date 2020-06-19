@@ -33,7 +33,7 @@ namespace GG.Repository
         /// <returns></returns>
         public static DataTable SelectValueBySQLQueryString(string DisplayMember, string ValueMember, string table, string filter)
         {
-            DataTable dt=new DataTable();
+            DataTable dt = new DataTable();
             string sqlstring = string.Empty;
             string value = ValueMember.ToString() + "," + DisplayMember.Replace(";", ",").ToString();
             if (!string.IsNullOrWhiteSpace(filter))

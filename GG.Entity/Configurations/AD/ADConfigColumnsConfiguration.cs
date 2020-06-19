@@ -16,7 +16,7 @@ namespace GG.Entity
 
             builder.HasKey(x => x.ADConfigColumnID);
 
-            builder.Property(x => x.ADConfigColumnID).UseIdentityColumn();
+            //builder.Property(x => x.ADConfigColumnID).UseIdentityColumn();
 
             builder.Property(s => s.AAStatus).HasMaxLength(50);
 

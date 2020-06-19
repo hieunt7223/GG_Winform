@@ -1,11 +1,11 @@
-﻿using DevExpress.XtraEditors;
-using GG.Base;
-using GG.Common;
-using GG.Entity;
-using System;
+﻿using System;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using GG.Entity;
+using GG.Base;
+using GG.Common;
 
 namespace GG.Studio
 {
