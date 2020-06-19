@@ -8,3 +8,4 @@ E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\obj\Debug\GG.Component.cspr
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\obj\Debug\GG.Component.csproj.CopyComplete
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\obj\Debug\GG.Component.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Component\obj\Debug\GG.Component.pdb
+E:\1.GreenGlobal\3.Build\2.GG_Winform\GG.Component\GG.Component.dll.config

@@ -66,7 +66,7 @@
             // pn_view
             // 
             this.pn_view.AutoScroll = true;
-            this.pn_view.BackgroundImage = global::GG.Studio.Properties.Resources.data_grid;
+            this.pn_view.BackgroundImage = global::GG.Studio.Properties.Resources.Bg1;
             this.pn_view.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pn_view.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_view.Location = new System.Drawing.Point(0, 24);

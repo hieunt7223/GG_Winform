@@ -1,13 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Configuration;
 
 namespace GG.Entity
 {
     public class Context : DbContext
     {
-        public Context() { }
-        public Context(DbContextOptions options) : base(options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["Database"].ConnectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -1,9 +1,9 @@
 ﻿using GG.Common;
 using GG.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-
 namespace GG.Repository
 {
     public class ADConfigColumnsRepository
@@ -16,9 +16,10 @@ namespace GG.Repository
         public static List<ADConfigColumns> GetDataConfigColumnsByTableName(string strTableName)
         {
             var _context = new Context();
-            var list = from c in _context.ADConfigColumns
-                       where c.AAStatus == Status.Alive.ToString() && c.ADConfigColumnTableName == strTableName
-                       select c;
+            var list1 = _context.Set<ADConfigColumns>().ToListAsync();
+            var list = (from c in _context.Set<ADConfigColumns>()
+                        where c.AAStatus == Status.Alive.ToString() && c.ADConfigColumnTableName == strTableName
+                        select c);
             return list.ToList();
         }
 

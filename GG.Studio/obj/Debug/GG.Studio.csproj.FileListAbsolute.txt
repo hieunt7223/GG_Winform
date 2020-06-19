@@ -2,7 +2,6 @@ E:\1.GreenGlobal\3.Build\2.GG_Winform\GG.Studio\GG.Studio.exe.config
 E:\1.GreenGlobal\3.Build\2.GG_Winform\GG.Studio\GG.Studio.exe
 E:\1.GreenGlobal\3.Build\2.GG_Winform\GG.Studio\GG.Studio.pdb
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\obj\Debug\GG.Studio.csprojAssemblyReference.cache
-E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\obj\Debug\GG.Studio.Form1.resources
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\obj\Debug\GG.Studio.Properties.Resources.resources
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\obj\Debug\GG.Studio.frmAddModule.resources
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\obj\Debug\GG.Studio.frmCreateUI.resources

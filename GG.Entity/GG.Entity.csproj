@@ -114,9 +114,13 @@
     <Reference Include="System.ComponentModel.DataAnnotations">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Core">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Data" />
     <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\GG_Winform\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
       <Private>True</Private>
@@ -152,9 +156,6 @@
     <Reference Include="Microsoft.CSharp">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data">
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Deployment">
       <Private>True</Private>
     </Reference>
@@ -178,7 +179,6 @@
     <Compile Include="Configurations\ST\STModulesConfiguration.cs" />
     <Compile Include="Configurations\ST\STSystemsConfiguration.cs" />
     <Compile Include="EF\Context.cs" />
-    <Compile Include="EF\ContextFactory.cs" />
     <Compile Include="Entities\AD\ADConfigColumns.cs" />
     <Compile Include="Entities\AD\ADConfigValues.cs" />
     <Compile Include="Entities\AD\ADFieldColumns.cs" />
