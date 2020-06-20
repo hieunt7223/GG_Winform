@@ -73,6 +73,7 @@
     <Compile Include="ConverJson\ConvertListToJson.cs" />
     <Compile Include="ConverJson\GetProperty.cs" />
     <Compile Include="ConverJson\LoadFormToJson.cs" />
+    <Compile Include="ConverJson\SerializeObject.cs" />
     <Compile Include="ConverJson\SetProperty.cs" />
     <Compile Include="Functions.cs" />
     <Compile Include="Localization\BaseLocalizedResources.Designer.cs">
