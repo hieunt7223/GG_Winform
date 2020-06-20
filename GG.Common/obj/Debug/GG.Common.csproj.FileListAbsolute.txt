@@ -1,0 +1,7 @@
+E:\GG.Winform\GG.Winform\GG.Common\bin\Debug\GG.Common.dll
+E:\GG.Winform\GG.Winform\GG.Common\bin\Debug\GG.Common.pdb
+E:\GG.Winform\GG.Winform\GG.Common\obj\Debug\GG.Common.Properties.Resources.resources
+E:\GG.Winform\GG.Winform\GG.Common\obj\Debug\GG.Common.csproj.GenerateResource.cache
+E:\GG.Winform\GG.Winform\GG.Common\obj\Debug\GG.Common.csproj.CoreCompileInputs.cache
+E:\GG.Winform\GG.Winform\GG.Common\obj\Debug\GG.Common.dll
+E:\GG.Winform\GG.Winform\GG.Common\obj\Debug\GG.Common.pdb
