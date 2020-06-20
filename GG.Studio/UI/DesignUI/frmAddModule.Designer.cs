@@ -56,9 +56,9 @@
             this.ggGroupBox1.GGDataSource = null;
             this.ggGroupBox1.GGFieldGroup = null;
             this.ggGroupBox1.GGFieldRelation = null;
-            this.ggGroupBox1.Location = new System.Drawing.Point(1, 129);
+            this.ggGroupBox1.Location = new System.Drawing.Point(1, 122);
             this.ggGroupBox1.Name = "ggGroupBox1";
-            this.ggGroupBox1.Size = new System.Drawing.Size(344, 54);
+            this.ggGroupBox1.Size = new System.Drawing.Size(342, 54);
             this.ggGroupBox1.TabIndex = 1;
             this.ggGroupBox1.TabStop = false;
             // 
@@ -70,7 +70,7 @@
             this.btnCommit.GGFieldGroup = null;
             this.btnCommit.GGFieldRelation = null;
             this.btnCommit.ImageOptions.Image = global::GG.Studio.Properties.Resources.Save;
-            this.btnCommit.Location = new System.Drawing.Point(181, 15);
+            this.btnCommit.Location = new System.Drawing.Point(179, 15);
             this.btnCommit.Name = "btnCommit";
             this.btnCommit.Size = new System.Drawing.Size(75, 30);
             this.btnCommit.TabIndex = 0;
@@ -85,7 +85,7 @@
             this.btnCancel.GGFieldGroup = null;
             this.btnCancel.GGFieldRelation = null;
             this.btnCancel.ImageOptions.Image = global::GG.Studio.Properties.Resources.DeleteS;
-            this.btnCancel.Location = new System.Drawing.Point(262, 15);
+            this.btnCancel.Location = new System.Drawing.Point(260, 15);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 30);
             this.btnCancel.TabIndex = 1;
@@ -111,7 +111,7 @@
             this.grb_info.GGFieldRelation = null;
             this.grb_info.Location = new System.Drawing.Point(1, 2);
             this.grb_info.Name = "grb_info";
-            this.grb_info.Size = new System.Drawing.Size(344, 136);
+            this.grb_info.Size = new System.Drawing.Size(342, 129);
             this.grb_info.TabIndex = 0;
             this.grb_info.TabStop = false;
             this.grb_info.Text = "Thông tin";
@@ -250,7 +250,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 184);
+            this.ClientSize = new System.Drawing.Size(345, 177);
             this.Controls.Add(this.grb_info);
             this.Controls.Add(this.ggGroupBox1);
             this.Name = "frmAddModule";

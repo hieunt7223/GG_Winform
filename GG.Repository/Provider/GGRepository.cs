@@ -1,4 +1,5 @@
 ﻿using GG.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Data;
 
 namespace GG.Repository
@@ -15,14 +16,12 @@ namespace GG.Repository
             var _context = new ContextDb();
 
             var table = new DataTable();
+            var cmd = _context.Database.GetDbConnection().CreateCommand();
 
-            //var cmd = _context.Database.Connection.CreateCommand();
-
-            //cmd.CommandText = querySQL;
-
-            //cmd.Connection.Open();
-            //table.Load(cmd.ExecuteReader());
-            //cmd.Connection.Close();
+            cmd.CommandText = querySQL;
+            cmd.Connection.Open();
+            table.Load(cmd.ExecuteReader());
+            cmd.Connection.Close();
 
             return table;
         }
