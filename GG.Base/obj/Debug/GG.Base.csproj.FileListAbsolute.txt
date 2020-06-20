@@ -35,7 +35,6 @@ E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\Microsoft.Extensions.C
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\Microsoft.Data.SqlClient.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\DevExpress.XtraBars.v19.1.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\DevExpress.RichEdit.v19.1.Core.dll
-E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\System.Memory.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\Microsoft.Identity.Client.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\DevExpress.Office.v19.1.Core.dll
@@ -103,3 +102,8 @@ E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\obj\Debug\GG.Base.csproj.CoreCom
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\obj\Debug\GG.Base.csproj.CopyComplete
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\obj\Debug\GG.Base.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\obj\Debug\GG.Base.pdb
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\GG.Base.dll.config
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\Microsoft.Owin.dll
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\Owin.dll
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\bin\Debug\Microsoft.Owin.xml
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Base\obj\Debug\GG.Base.Localization.BaseLocalizedResources.resources
