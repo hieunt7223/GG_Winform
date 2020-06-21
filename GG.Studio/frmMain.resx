@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="accordionControlElement2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ace_DesignUI.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAA+xJREFUSEvt
         lVtTWlcYhvdf6D8gf6XTm6rTaTptEGJH6wEGRomneKgWCErRiqd0Ooodg2c5qyAIChjQiiQYtR0vSKIG
@@ -140,7 +140,7 @@
         OoUfvjegR9+PLp0e2nsdUCu1aLung0atRfHt0iu//P+4IjjuT6fkfIaavG/8AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="accordionControlElement3.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ace_generateUI.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABJpJREFUSEut
         lWtMk1cYx7uvyz4vGYJb3DKTxUW2hSUbXj6YTN2CsqBQMmAZBKcgXim2UEBEYALFDku59UJpaSm0AoK9
@@ -165,7 +165,7 @@
         jtN18A4VB5Kld+aTCPnPezJaFgMFFqq9MtPKKo32LwkhCCs5be+jAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="accordionControlElement4.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ace_ConfigColumn.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABIFJREFUSEud
         VX1MlWUUf4YwNu5A8QOnMltrYf+42bRIlKxbymZiZgJjZGQEm2bjI4a7mg7SaMMlCMqIwgtUBhYfS3EI

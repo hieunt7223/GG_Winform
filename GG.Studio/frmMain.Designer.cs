@@ -30,30 +30,41 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.dfc_Main = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.pn_view = new System.Windows.Forms.Panel();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_DesignUI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_generateUI = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_ConfigColumn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.dfc_Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // dfc_Main
             // 
+            this.dfc_Main.Controls.Add(this.pn_view);
             this.dfc_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dfc_Main.Location = new System.Drawing.Point(184, 27);
+            this.dfc_Main.Location = new System.Drawing.Point(184, 29);
             this.dfc_Main.Name = "dfc_Main";
-            this.dfc_Main.Size = new System.Drawing.Size(507, 446);
+            this.dfc_Main.Size = new System.Drawing.Size(511, 446);
             this.dfc_Main.TabIndex = 0;
+            // 
+            // pn_view
+            // 
+            this.pn_view.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_view.Location = new System.Drawing.Point(0, 0);
+            this.pn_view.Name = "pn_view";
+            this.pn_view.Size = new System.Drawing.Size(511, 446);
+            this.pn_view.TabIndex = 0;
             // 
             // accordionControl1
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 27);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 29);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.accordionControl1.Size = new System.Drawing.Size(184, 446);
@@ -72,7 +83,7 @@
             // 
             // ace_DesignUI
             // 
-            this.ace_DesignUI.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
+            this.ace_DesignUI.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ace_DesignUI.ImageOptions.Image")));
             this.ace_DesignUI.ImageOptions.ImageIndex = 1;
             this.ace_DesignUI.Name = "ace_DesignUI";
             this.ace_DesignUI.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
@@ -81,14 +92,14 @@
             // 
             // ace_generateUI
             // 
-            this.ace_generateUI.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement3.ImageOptions.Image")));
+            this.ace_generateUI.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ace_generateUI.ImageOptions.Image")));
             this.ace_generateUI.Name = "ace_generateUI";
             this.ace_generateUI.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.ace_generateUI.Text = "Generate Entity";
             // 
             // ace_ConfigColumn
             // 
-            this.ace_ConfigColumn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
+            this.ace_ConfigColumn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ace_ConfigColumn.ImageOptions.Image")));
             this.ace_ConfigColumn.Name = "ace_ConfigColumn";
             this.ace_ConfigColumn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.ace_ConfigColumn.Text = "Cấu hình dữ liệu cột";
@@ -98,7 +109,7 @@
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(691, 27);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(695, 29);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -106,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 473);
+            this.ClientSize = new System.Drawing.Size(695, 475);
             this.ControlContainer = this.dfc_Main;
             this.Controls.Add(this.dfc_Main);
             this.Controls.Add(this.accordionControl1);
@@ -117,6 +128,7 @@
             this.NavigationControl = this.accordionControl1;
             this.Text = "Thiết kế hệ thống";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.dfc_Main.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             this.ResumeLayout(false);
@@ -131,5 +143,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_DesignUI;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_generateUI;
         private DevExpress.XtraBars.Navigation.AccordionControlElement ace_ConfigColumn;
+        private System.Windows.Forms.Panel pn_view;
     }
 }
