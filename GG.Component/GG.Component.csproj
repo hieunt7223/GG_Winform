@@ -176,12 +176,21 @@
     <Compile Include="ControlCustom\GGTreeList.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="GroupControl\GGWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupControl\GGWaitForm.Designer.cs">
+      <DependentUpon>GGWaitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="IGGControl.cs" />
     <Compile Include="Libraries\Class\Functions.cs" />
     <Compile Include="Libraries\Control\ComboBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GroupControl\GGWaitForm.resx">
+      <DependentUpon>GGWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -217,7 +226,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Form\" />
-    <Folder Include="GroupControl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

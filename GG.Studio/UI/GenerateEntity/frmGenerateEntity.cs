@@ -9,6 +9,8 @@ using System.Data.OleDb;
 using System.Configuration;
 using DevExpress.Utils;
 using GG.Base;
+using GG.Component;
+using DevExpress.XtraSplashScreen;
 
 namespace GG.Studio
 {
@@ -28,7 +30,9 @@ namespace GG.Studio
         #region ConnectString
         private void btn_ConnectString_Click(object sender, EventArgs e)
         {
+            SplashScreenManager.ShowForm(null, typeof(GGWaitForm), false, false, false, ParentFormState.Locked);
             FillTablesAndFields();
+            SplashScreenManager.CloseForm();
         }
 
         private void FillTablesAndFields()
@@ -310,35 +314,38 @@ namespace GG.Studio
             {
                 OpenConn(AccessConnString);
                 object[] objArrRestrict;
-                string TableName = lvTables.SelectedItem.ToString();
-                //Object to Specify which Table to look inside of
-                objArrRestrict = new object[] { null, null, TableName, null };
-                //Get the Table Schema
-                DataTable schemaCols = Conn.GetOleDbSchemaTable(OleDbSchemaGuid.Columns, objArrRestrict);
-                //declare a Hashtable for the Column Data
-                //Hashtable htCols = new Hashtable();
-                //List the schema info for the selected table
-                ColumnTableList.Clear();
-                int i = 1;
-                foreach (DataRow fieldrow in schemaCols.Rows)
+                if (lvTables.SelectedItem != null)
                 {
-                    ColumnTable info = new ColumnTable();
-                    info.TableName = fieldrow["TABLE_NAME"].ToString();
-                    info.ColumnName = fieldrow["COLUMN_NAME"].ToString();
-                    info.TypeName = fieldtypename(int.Parse(fieldrow["DATA_TYPE"].ToString()));
-                    string length = fieldrow["CHARACTER_MAXIMUM_LENGTH"].ToString();
-                    info.ColumnLength = string.IsNullOrWhiteSpace(length) ? 0 : Convert.ToInt32(length);
-                    info.IsNull = Convert.ToBoolean(fieldrow["IS_NULLABLE"].ToString());
-                    if (i == 1)
+                    string TableName = lvTables.SelectedItem.ToString();
+                    //Object to Specify which Table to look inside of
+                    objArrRestrict = new object[] { null, null, TableName, null };
+                    //Get the Table Schema
+                    DataTable schemaCols = Conn.GetOleDbSchemaTable(OleDbSchemaGuid.Columns, objArrRestrict);
+                    //declare a Hashtable for the Column Data
+                    //Hashtable htCols = new Hashtable();
+                    //List the schema info for the selected table
+                    ColumnTableList.Clear();
+                    int i = 1;
+                    foreach (DataRow fieldrow in schemaCols.Rows)
                     {
-                        info.Key = true;
+                        ColumnTable info = new ColumnTable();
+                        info.TableName = fieldrow["TABLE_NAME"].ToString();
+                        info.ColumnName = fieldrow["COLUMN_NAME"].ToString();
+                        info.TypeName = fieldtypename(int.Parse(fieldrow["DATA_TYPE"].ToString()));
+                        string length = fieldrow["CHARACTER_MAXIMUM_LENGTH"].ToString();
+                        info.ColumnLength = string.IsNullOrWhiteSpace(length) ? 0 : Convert.ToInt32(length);
+                        info.IsNull = Convert.ToBoolean(fieldrow["IS_NULLABLE"].ToString());
+                        if (i == 1)
+                        {
+                            info.Key = true;
+                        }
+                        else
+                        {
+                            info.Key = false;
+                        }
+                        ColumnTableList.Add(info);
+                        i++;
                     }
-                    else
-                    {
-                        info.Key = false;
-                    }
-                    ColumnTableList.Add(info);
-                    i++;
                 }
             }
             catch (Exception ex)
