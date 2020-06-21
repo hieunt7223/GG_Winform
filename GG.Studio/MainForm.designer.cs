@@ -43,7 +43,7 @@
             this.smi_GenerateEntity});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(986, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(976, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,14 +71,14 @@
             this.pn_view.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_view.Location = new System.Drawing.Point(0, 24);
             this.pn_view.Name = "pn_view";
-            this.pn_view.Size = new System.Drawing.Size(986, 526);
+            this.pn_view.Size = new System.Drawing.Size(976, 510);
             this.pn_view.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 550);
+            this.ClientSize = new System.Drawing.Size(976, 534);
             this.Controls.Add(this.pn_view);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -46,9 +46,9 @@
             // 
             this.dfc_Main.Controls.Add(this.pn_view);
             this.dfc_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dfc_Main.Location = new System.Drawing.Point(184, 29);
+            this.dfc_Main.Location = new System.Drawing.Point(184, 26);
             this.dfc_Main.Name = "dfc_Main";
-            this.dfc_Main.Size = new System.Drawing.Size(511, 446);
+            this.dfc_Main.Size = new System.Drawing.Size(509, 448);
             this.dfc_Main.TabIndex = 0;
             // 
             // pn_view
@@ -56,7 +56,7 @@
             this.pn_view.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_view.Location = new System.Drawing.Point(0, 0);
             this.pn_view.Name = "pn_view";
-            this.pn_view.Size = new System.Drawing.Size(511, 446);
+            this.pn_view.Size = new System.Drawing.Size(509, 448);
             this.pn_view.TabIndex = 0;
             // 
             // accordionControl1
@@ -64,10 +64,10 @@
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 29);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 26);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(184, 446);
+            this.accordionControl1.Size = new System.Drawing.Size(184, 448);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -109,7 +109,7 @@
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(695, 29);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(693, 26);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 475);
+            this.ClientSize = new System.Drawing.Size(693, 474);
             this.ControlContainer = this.dfc_Main;
             this.Controls.Add(this.dfc_Main);
             this.Controls.Add(this.accordionControl1);

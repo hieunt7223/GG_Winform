@@ -91,9 +91,9 @@
             this.groupBox1.Controls.Add(this.menuStrip1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.groupBox1.Size = new System.Drawing.Size(1134, 50);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -110,7 +110,7 @@
             this.menuStrip2.Location = new System.Drawing.Point(1011, 20);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.menuStrip2.Size = new System.Drawing.Size(108, 18);
+            this.menuStrip2.Size = new System.Drawing.Size(108, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip1";
             // 
@@ -119,7 +119,7 @@
             this.stm_DeleteControl.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stm_DeleteControl.Image = global::GG.Studio.Properties.Resources.DeleteAll;
             this.stm_DeleteControl.Name = "stm_DeleteControl";
-            this.stm_DeleteControl.Size = new System.Drawing.Size(98, 18);
+            this.stm_DeleteControl.Size = new System.Drawing.Size(98, 24);
             this.stm_DeleteControl.Text = "Xóa Control";
             this.stm_DeleteControl.Click += new System.EventHandler(this.smt_DeleteControl_Click);
             // 
@@ -139,7 +139,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(9, 14);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.menuStrip1.Size = new System.Drawing.Size(329, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(329, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -151,7 +151,7 @@
             this.stm_New.Image = global::GG.Studio.Properties.Resources._new;
             this.stm_New.Name = "stm_New";
             this.stm_New.Padding = new System.Windows.Forms.Padding(4, 0, 4, 10);
-            this.stm_New.Size = new System.Drawing.Size(96, 24);
+            this.stm_New.Size = new System.Drawing.Size(96, 30);
             this.stm_New.Text = "Tạo mới từ";
             // 
             // stm_CreateNewByUI
@@ -174,7 +174,7 @@
             // 
             this.stm_Cancel.Image = global::GG.Studio.Properties.Resources.DeleteS;
             this.stm_Cancel.Name = "stm_Cancel";
-            this.stm_Cancel.Size = new System.Drawing.Size(56, 24);
+            this.stm_Cancel.Size = new System.Drawing.Size(56, 30);
             this.stm_Cancel.Text = "Hủy";
             this.stm_Cancel.Click += new System.EventHandler(this.stm_Cancel_Click);
             // 
@@ -182,7 +182,7 @@
             // 
             this.stm_Edit.Image = global::GG.Studio.Properties.Resources.text;
             this.stm_Edit.Name = "stm_Edit";
-            this.stm_Edit.Size = new System.Drawing.Size(56, 24);
+            this.stm_Edit.Size = new System.Drawing.Size(56, 30);
             this.stm_Edit.Text = "Sửa";
             this.stm_Edit.Click += new System.EventHandler(this.stm_Edit_Click);
             // 
@@ -190,7 +190,7 @@
             // 
             this.stm_Delete.Image = global::GG.Studio.Properties.Resources.DeleteAll;
             this.stm_Delete.Name = "stm_Delete";
-            this.stm_Delete.Size = new System.Drawing.Size(55, 24);
+            this.stm_Delete.Size = new System.Drawing.Size(55, 30);
             this.stm_Delete.Text = "Xóa";
             this.stm_Delete.Click += new System.EventHandler(this.stm_Delete_Click);
             // 
@@ -198,7 +198,7 @@
             // 
             this.stm_Save.Image = global::GG.Studio.Properties.Resources.Save;
             this.stm_Save.Name = "stm_Save";
-            this.stm_Save.Size = new System.Drawing.Size(56, 24);
+            this.stm_Save.Size = new System.Drawing.Size(56, 30);
             this.stm_Save.Text = "Lưu";
             this.stm_Save.Click += new System.EventHandler(this.smt_Save_Click);
             // 
@@ -468,7 +468,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(128, 470);
+            this.groupBox2.Size = new System.Drawing.Size(127, 470);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cấu hình thông số";
@@ -478,7 +478,7 @@
             this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertyGrid1.Location = new System.Drawing.Point(3, 17);
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(122, 450);
+            this.propertyGrid1.Size = new System.Drawing.Size(121, 450);
             this.propertyGrid1.TabIndex = 1;
             // 
             // panel1
@@ -491,7 +491,7 @@
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(865, 442);
+            this.panel1.Size = new System.Drawing.Size(864, 442);
             this.panel1.TabIndex = 1;
             // 
             // pnControls
@@ -542,14 +542,14 @@
             // 
             this.tb_thietkegiaodien.Controls.Add(this.panel1);
             this.tb_thietkegiaodien.Name = "tb_thietkegiaodien";
-            this.tb_thietkegiaodien.Size = new System.Drawing.Size(865, 442);
+            this.tb_thietkegiaodien.Size = new System.Drawing.Size(864, 442);
             this.tb_thietkegiaodien.Text = "Thiết kế giao diện";
             // 
             // tb_cauhinh
             // 
             this.tb_cauhinh.Name = "tb_cauhinh";
             this.tb_cauhinh.PageVisible = false;
-            this.tb_cauhinh.Size = new System.Drawing.Size(865, 436);
+            this.tb_cauhinh.Size = new System.Drawing.Size(864, 442);
             this.tb_cauhinh.Text = "Thông tin cấu hình";
             // 
             // frmCreateUI

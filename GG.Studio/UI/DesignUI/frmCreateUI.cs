@@ -1058,6 +1058,11 @@ namespace GG.Studio
                 tb_thietkegiaodien.Text = "Thiết kế giao diện";
             }
         }
+
+        private void groupBox1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         #endregion
 
         #region Xóa Control
