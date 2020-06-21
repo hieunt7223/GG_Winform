@@ -91,7 +91,7 @@
             this.groupBox1.Controls.Add(this.menuStrip1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5000, 0, 0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.groupBox1.Size = new System.Drawing.Size(1134, 50);
