@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGenerateEntity));
             this.ggGroupBox2 = new GG.Component.GGGroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.generateClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.smi_EntityClass = new System.Windows.Forms.ToolStripMenuItem();
+            this.smi_ConfigurationClass = new System.Windows.Forms.ToolStripMenuItem();
             this.ggGroupBox1 = new GG.Component.GGGroupBox();
             this.lvTables = new DevExpress.XtraEditors.ListBoxControl();
             this.btn_ConnectString = new GG.Component.GGButton();
             this.pn_genClass = new System.Windows.Forms.Panel();
             this.rtfClass = new System.Windows.Forms.RichTextBox();
-            this.smi_ConfigurationClass = new System.Windows.Forms.ToolStripMenuItem();
             this.ggGroupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.ggGroupBox1.SuspendLayout();
@@ -76,18 +77,26 @@
             this.generateClassToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.smi_EntityClass,
             this.smi_ConfigurationClass});
-            this.generateClassToolStripMenuItem.Image = global::GG.Studio.Properties.Resources.TreeView;
+            this.generateClassToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("generateClassToolStripMenuItem.Image")));
             this.generateClassToolStripMenuItem.Name = "generateClassToolStripMenuItem";
-            this.generateClassToolStripMenuItem.Size = new System.Drawing.Size(192, 20);
-            this.generateClassToolStripMenuItem.Text = "Generate Entity Framework";
+            this.generateClassToolStripMenuItem.Size = new System.Drawing.Size(223, 20);
+            this.generateClassToolStripMenuItem.Text = "Generate Entity Framework Core";
             // 
             // smi_EntityClass
             // 
-            this.smi_EntityClass.Image = global::GG.Studio.Properties.Resources.text;
+            this.smi_EntityClass.Image = ((System.Drawing.Image)(resources.GetObject("smi_EntityClass.Image")));
             this.smi_EntityClass.Name = "smi_EntityClass";
             this.smi_EntityClass.Size = new System.Drawing.Size(186, 22);
             this.smi_EntityClass.Text = "Entity Class";
             this.smi_EntityClass.Click += new System.EventHandler(this.smi_EntityClass_Click);
+            // 
+            // smi_ConfigurationClass
+            // 
+            this.smi_ConfigurationClass.Image = ((System.Drawing.Image)(resources.GetObject("smi_ConfigurationClass.Image")));
+            this.smi_ConfigurationClass.Name = "smi_ConfigurationClass";
+            this.smi_ConfigurationClass.Size = new System.Drawing.Size(186, 22);
+            this.smi_ConfigurationClass.Text = "Configuration Class";
+            this.smi_ConfigurationClass.Click += new System.EventHandler(this.smi_ConfigurationClass_Click);
             // 
             // ggGroupBox1
             // 
@@ -122,8 +131,8 @@
             this.btn_ConnectString.GGDataSource = null;
             this.btn_ConnectString.GGFieldGroup = null;
             this.btn_ConnectString.GGFieldRelation = null;
-            this.btn_ConnectString.Image = global::GG.Studio.Properties.Resources.sql;
-            this.btn_ConnectString.Location = new System.Drawing.Point(3, 20);
+            this.btn_ConnectString.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_ConnectString.ImageOptions.Image")));
+            this.btn_ConnectString.Location = new System.Drawing.Point(6, 20);
             this.btn_ConnectString.Name = "btn_ConnectString";
             this.btn_ConnectString.Size = new System.Drawing.Size(138, 35);
             this.btn_ConnectString.TabIndex = 0;
@@ -150,14 +159,6 @@
             this.rtfClass.Size = new System.Drawing.Size(699, 487);
             this.rtfClass.TabIndex = 0;
             this.rtfClass.Text = "";
-            // 
-            // smi_ConfigurationClass
-            // 
-            this.smi_ConfigurationClass.Image = global::GG.Studio.Properties.Resources.text;
-            this.smi_ConfigurationClass.Name = "smi_ConfigurationClass";
-            this.smi_ConfigurationClass.Size = new System.Drawing.Size(186, 22);
-            this.smi_ConfigurationClass.Text = "Configuration Class";
-            this.smi_ConfigurationClass.Click += new System.EventHandler(this.smi_ConfigurationClass_Click);
             // 
             // frmGenerateEntity
             // 

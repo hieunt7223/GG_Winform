@@ -1059,10 +1059,6 @@ namespace GG.Studio
             }
         }
 
-        private void groupBox1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         #endregion
 
         #region Xóa Control

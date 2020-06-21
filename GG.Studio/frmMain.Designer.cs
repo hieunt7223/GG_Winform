@@ -96,6 +96,7 @@
             this.ace_generateUI.Name = "ace_generateUI";
             this.ace_generateUI.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.ace_generateUI.Text = "Generate Entity";
+            this.ace_generateUI.Click += new System.EventHandler(this.ace_generateUI_Click);
             // 
             // ace_ConfigColumn
             // 

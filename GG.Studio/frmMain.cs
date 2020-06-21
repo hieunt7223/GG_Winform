@@ -40,5 +40,18 @@ namespace GG.Studio
             }
             return check;
         }
+
+        private void ace_generateUI_Click(object sender, EventArgs e)
+        {
+            if (checkPannel() == false) return;
+            frmGenerateEntity frm = new frmGenerateEntity();
+            if (frm != null)
+            {
+                pn_view.Controls.Clear();
+                pn_view.Controls.Add(frm);
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+            }
+        }
     }
 }

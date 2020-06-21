@@ -7,6 +7,8 @@ using DevExpress.XtraEditors;
 using System.Collections.Specialized;
 using System.Data.OleDb;
 using System.Configuration;
+using DevExpress.Utils;
+using GG.Base;
 
 namespace GG.Studio
 {
@@ -84,7 +86,10 @@ namespace GG.Studio
                 }
                 string table = lvTables.SelectedItem.ToString();
 
-                CreateFileEntity(table, ColumnTableList);
+                if (CreateFileEntity(table, ColumnTableList) == false)
+                {
+                    return;
+                }
                 XtraMessageBox.Show("Xuất file Entity Class By Table " + table + " thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -94,17 +99,18 @@ namespace GG.Studio
             }
         }
 
-        private void CreateFileEntity(string TableName, List<ColumnTable> htColumns)
+        private bool CreateFileEntity(string TableName, List<ColumnTable> htColumns)
         {
+            bool check = true;
             try
             {
                 StringBuilder sb = new StringBuilder();
-                sb.Append("using System;" + "\r\n");
-                sb.Append("using System.Collections.Generic;" + "\r\n");
-                sb.Append("using System.Linq;" + "\r\n");
-                sb.Append("using System.Text;" + "\r\n");
-                //extra space so it looks ok
-                sb.Append("" + "\r\n");
+                //sb.Append("using System;" + "\r\n");
+                //sb.Append("using System.Collections.Generic;" + "\r\n");
+                //sb.Append("using System.Linq;" + "\r\n");
+                //sb.Append("using System.Text;" + "\r\n");
+                ////extra space so it looks ok
+                //sb.Append("" + "\r\n");
                 //now the namespace
                 NameValueCollection appSettings = ConfigurationManager.AppSettings;
                 string mamespareGenEntity = appSettings["NamespareGenEntity"].ToString();
@@ -145,8 +151,10 @@ namespace GG.Studio
             }
             catch (Exception ex)
             {
-                //
+                Functions.ShowMessage(ex.Message);
+                check = false;
             }
+            return check;
         }
         #endregion
 
@@ -167,8 +175,10 @@ namespace GG.Studio
                 }
                 string table = lvTables.SelectedItem.ToString();
 
-                CreateFileConfiguration(table, "Configuration", ColumnTableList);
-
+                if (CreateFileConfiguration(table, "Configuration", ColumnTableList) == false)
+                {
+                    return;
+                }
                 XtraMessageBox.Show("Xuất file Configuration Class By Table " + table + " thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -178,16 +188,14 @@ namespace GG.Studio
             }
         }
 
-        private void CreateFileConfiguration(string tableName, string fileName, List<ColumnTable> htColumns)
+        private bool CreateFileConfiguration(string tableName, string fileName, List<ColumnTable> htColumns)
         {
+            bool check = true;
             try
             {
                 StringBuilder sb = new StringBuilder();
-                sb.Append("using System;" + "\r\n");
-                sb.Append("using System.Collections.Generic;" + "\r\n");
-                sb.Append("using System.Data.Entity.ModelConfiguration;" + "\r\n");
-                sb.Append("using System.Linq;" + "\r\n");
-                sb.Append("using System.Text;" + "\r\n");
+                sb.Append("using Microsoft.EntityFrameworkCore;" + "\r\n");
+                sb.Append("using Microsoft.EntityFrameworkCore.Metadata.Builders;" + "\r\n");
                 //extra space so it looks ok
                 sb.Append("" + "\r\n");
                 //now the namespace
@@ -204,20 +212,21 @@ namespace GG.Studio
                 sb.Append("\t" + "/// </summary>" + "\r\n");
 
                 //start with our class name parent
-                sb.Append("\t" + "public class " + tableName + fileName + " : EntityTypeConfiguration<" + tableName + ">" + "\r\n");
+                sb.Append("\t" + "public class " + tableName + fileName + " : IEntityTypeConfiguration<" + tableName + ">" + "\r\n");
                 sb.Append("\t" + "{" + "\r\n");
                 //start with our class name 
-                sb.Append("\t" + "\t" + "public " + tableName + fileName + " ()" + "\r\n");
+                sb.Append("\t" + "\t" + "public void Configure (EntityTypeBuilder<" + tableName + "> builder)" + "\r\n");
                 sb.Append("\t" + "\t" + "{" + "\r\n");
 
                 sb.Append("\t" + "\t" + "\t" + "#region Generated " + fileName + " By Column" + "\r\n" + "\r\n");
                 // To Table
-                sb.Append("\t" + "\t" + "\t" + "this.ToTable(" + "\"" + tableName + "\");" + "\r\n" + "\r\n");
+                sb.Append("\t" + "\t" + "\t" + "builder.ToTable(" + "\"" + tableName + "\");" + "\r\n" + "\r\n");
                 foreach (ColumnTable col in htColumns)
                 {
                     if (col.Key == true)//khóa chính
                     {
-                        sb.Append("\t" + "\t" + "\t" + "this.HasKey<" + col.TypeName + ">(s => s." + col.ColumnName.Trim() + ");" + "\r\n" + "\r\n");
+                        sb.Append("\t" + "\t" + "\t" + "builder.HasKey(s => s." + col.ColumnName.Trim() + ");" + "\r\n" + "\r\n");
+                        sb.Append("\t" + "\t" + "\t" + "builder.Property(x => x." + col.ColumnName.Trim() + ").UseIdentityColumn();" + "\r\n" + "\r\n");
                     }
                     else if (col.TypeName.ToLower().Trim() == "string")
                     {
@@ -225,21 +234,21 @@ namespace GG.Studio
                         {
                             if (col.ColumnLength > 0)
                             {
-                                sb.Append("\t" + "\t" + "\t" + "this.Property(s => s." + col.ColumnName.Trim() + ").IsRequired().HasMaxLength(" + col.ColumnLength + ");" + "\r\n" + "\r\n");
+                                sb.Append("\t" + "\t" + "\t" + "builder.Property(s => s." + col.ColumnName.Trim() + ").IsRequired().HasMaxLength(" + col.ColumnLength + ");" + "\r\n" + "\r\n");
                             }
                             else
                             {
-                                sb.Append("\t" + "\t" + "\t" + "this.Property(s => s." + col.ColumnName.Trim() + ").IsRequired();" + "\r\n" + "\r\n");
+                                sb.Append("\t" + "\t" + "\t" + "builder.Property(s => s." + col.ColumnName.Trim() + ").IsRequired();" + "\r\n" + "\r\n");
                             }
                         }
                         else if (col.ColumnLength > 0)
                         {
-                            sb.Append("\t" + "\t" + "\t" + "this.Property(s => s." + col.ColumnName.Trim() + ").HasMaxLength(" + col.ColumnLength + ");" + "\r\n" + "\r\n");
+                            sb.Append("\t" + "\t" + "\t" + "builder.Property(s => s." + col.ColumnName.Trim() + ").HasMaxLength(" + col.ColumnLength + ");" + "\r\n" + "\r\n");
                         }
                     }
                     else if (col.IsNull == false)// bắt buộc
                     {
-                        sb.Append("\t" + "\t" + "\t" + "this.Property(s => s." + col.ColumnName.Trim() + ").IsRequired();" + "\r\n" + "\r\n");
+                        sb.Append("\t" + "\t" + "\t" + "builder.Property(s => s." + col.ColumnName.Trim() + ").IsRequired();" + "\r\n" + "\r\n");
                     }
                 }
                 sb.Append("\t" + "\t" + "\t" + "#endregion" + "\r\n");
@@ -255,8 +264,10 @@ namespace GG.Studio
             }
             catch (Exception ex)
             {
-                //
+                Functions.ShowMessage(ex.Message);
+                check = false;
             }
+            return check;
         }
         #endregion
 
