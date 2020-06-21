@@ -40,6 +40,7 @@
             this.ggLabel4 = new GG.Component.GGLabel();
             this.ggLabel3 = new GG.Component.GGLabel();
             this.ggLabel1 = new GG.Component.GGLabel();
+            this.ggLabel5 = new GG.Component.GGLabel();
             this.ggGroupBox1.SuspendLayout();
             this.grb_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_STModuleNo.Properties)).BeginInit();
@@ -56,9 +57,9 @@
             this.ggGroupBox1.GGDataSource = null;
             this.ggGroupBox1.GGFieldGroup = null;
             this.ggGroupBox1.GGFieldRelation = null;
-            this.ggGroupBox1.Location = new System.Drawing.Point(1, 122);
+            this.ggGroupBox1.Location = new System.Drawing.Point(1, 142);
             this.ggGroupBox1.Name = "ggGroupBox1";
-            this.ggGroupBox1.Size = new System.Drawing.Size(342, 54);
+            this.ggGroupBox1.Size = new System.Drawing.Size(352, 54);
             this.ggGroupBox1.TabIndex = 1;
             this.ggGroupBox1.TabStop = false;
             // 
@@ -70,7 +71,7 @@
             this.btnCommit.GGFieldGroup = null;
             this.btnCommit.GGFieldRelation = null;
             this.btnCommit.ImageOptions.Image = global::GG.Studio.Properties.Resources.Save;
-            this.btnCommit.Location = new System.Drawing.Point(179, 15);
+            this.btnCommit.Location = new System.Drawing.Point(189, 15);
             this.btnCommit.Name = "btnCommit";
             this.btnCommit.Size = new System.Drawing.Size(75, 30);
             this.btnCommit.TabIndex = 0;
@@ -85,7 +86,7 @@
             this.btnCancel.GGFieldGroup = null;
             this.btnCancel.GGFieldRelation = null;
             this.btnCancel.ImageOptions.Image = global::GG.Studio.Properties.Resources.DeleteS;
-            this.btnCancel.Location = new System.Drawing.Point(260, 15);
+            this.btnCancel.Location = new System.Drawing.Point(270, 15);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 30);
             this.btnCancel.TabIndex = 1;
@@ -97,6 +98,7 @@
             this.grb_info.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grb_info.Controls.Add(this.ggLabel5);
             this.grb_info.Controls.Add(this.txt_STModuleNo);
             this.grb_info.Controls.Add(this.txt_STModuleName);
             this.grb_info.Controls.Add(this.cbb_STModuleID);
@@ -111,7 +113,7 @@
             this.grb_info.GGFieldRelation = null;
             this.grb_info.Location = new System.Drawing.Point(1, 2);
             this.grb_info.Name = "grb_info";
-            this.grb_info.Size = new System.Drawing.Size(342, 129);
+            this.grb_info.Size = new System.Drawing.Size(352, 149);
             this.grb_info.TabIndex = 0;
             this.grb_info.TabStop = false;
             this.grb_info.Text = "Thông tin";
@@ -246,11 +248,25 @@
             this.ggLabel1.TabIndex = 0;
             this.ggLabel1.Text = "Phân hệ: (*)";
             // 
+            // ggLabel5
+            // 
+            this.ggLabel5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ggLabel5.Appearance.Options.UseFont = true;
+            this.ggLabel5.GGDataMember = null;
+            this.ggLabel5.GGDataSource = null;
+            this.ggLabel5.GGFieldGroup = null;
+            this.ggLabel5.GGFieldRelation = null;
+            this.ggLabel5.Location = new System.Drawing.Point(96, 126);
+            this.ggLabel5.Name = "ggLabel5";
+            this.ggLabel5.Size = new System.Drawing.Size(187, 13);
+            this.ggLabel5.TabIndex = 4;
+            this.ggLabel5.Text = "Vui lòng nhập chữ viết liền, không dấu!";
+            // 
             // frmAddModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 177);
+            this.ClientSize = new System.Drawing.Size(355, 197);
             this.Controls.Add(this.grb_info);
             this.Controls.Add(this.ggGroupBox1);
             this.Name = "frmAddModule";
@@ -279,5 +295,6 @@
         private Component.GGComboBase cbb_STModuleID;
         private Component.GGTextEdit txt_STModuleName;
         private Component.GGTextEdit txt_STModuleNo;
+        private Component.GGLabel ggLabel5;
     }
 }

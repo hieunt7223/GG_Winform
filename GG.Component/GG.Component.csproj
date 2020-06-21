@@ -113,67 +113,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\GGButton.cs">
+    <Compile Include="ControlCustom\GGButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGButtonEdit.cs">
+    <Compile Include="ControlCustom\GGButtonEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGCheckEdit.cs">
+    <Compile Include="ControlCustom\GGCheckEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGColorEdit.cs">
+    <Compile Include="ControlCustom\GGColorEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGComboBase.cs">
+    <Compile Include="ControlCustom\GGComboBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\GGComboBoxEdit.cs">
+    <Compile Include="ControlCustom\GGComboBoxEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGDateEdit.cs">
+    <Compile Include="ControlCustom\GGDateEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGFontEdit.cs">
+    <Compile Include="ControlCustom\GGFontEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGGridControl.cs">
+    <Compile Include="ControlCustom\GGGridControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGGroupBox.cs">
+    <Compile Include="ControlCustom\GGGroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGGroupControl.cs">
+    <Compile Include="ControlCustom\GGGroupControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGHyperLinkEdit.cs">
+    <Compile Include="ControlCustom\GGHyperLinkEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGLabel.cs">
+    <Compile Include="ControlCustom\GGLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGMemoEdit.cs">
+    <Compile Include="ControlCustom\GGMemoEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGPanel.cs">
+    <Compile Include="ControlCustom\GGPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGPictureEdit.cs">
+    <Compile Include="ControlCustom\GGPictureEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGRadioGroup.cs">
+    <Compile Include="ControlCustom\GGRadioGroup.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGTabControl.cs">
+    <Compile Include="ControlCustom\GGTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGTextEdit.cs">
+    <Compile Include="ControlCustom\GGTextEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGTimeEdit.cs">
+    <Compile Include="ControlCustom\GGTimeEdit.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Control\GGTreeList.cs">
+    <Compile Include="ControlCustom\GGTreeList.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="IGGControl.cs" />
