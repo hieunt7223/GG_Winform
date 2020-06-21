@@ -53,6 +53,8 @@
             // 
             // pn_view
             // 
+            this.pn_view.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_view.BackgroundImage")));
+            this.pn_view.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_view.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_view.Location = new System.Drawing.Point(0, 0);
             this.pn_view.Name = "pn_view";

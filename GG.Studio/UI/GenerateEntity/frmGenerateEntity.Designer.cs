@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGenerateEntity));
+            this.pn_genClass = new System.Windows.Forms.Panel();
+            this.rtfClass = new System.Windows.Forms.RichTextBox();
             this.ggGroupBox2 = new GG.Component.GGGroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.generateClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,14 +39,33 @@
             this.ggGroupBox1 = new GG.Component.GGGroupBox();
             this.lvTables = new DevExpress.XtraEditors.ListBoxControl();
             this.btn_ConnectString = new GG.Component.GGButton();
-            this.pn_genClass = new System.Windows.Forms.Panel();
-            this.rtfClass = new System.Windows.Forms.RichTextBox();
+            this.pn_genClass.SuspendLayout();
             this.ggGroupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.ggGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lvTables)).BeginInit();
-            this.pn_genClass.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pn_genClass
+            // 
+            this.pn_genClass.AutoScroll = true;
+            this.pn_genClass.BackColor = System.Drawing.Color.White;
+            this.pn_genClass.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pn_genClass.Controls.Add(this.rtfClass);
+            this.pn_genClass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_genClass.Location = new System.Drawing.Point(235, 59);
+            this.pn_genClass.Name = "pn_genClass";
+            this.pn_genClass.Size = new System.Drawing.Size(703, 491);
+            this.pn_genClass.TabIndex = 2;
+            // 
+            // rtfClass
+            // 
+            this.rtfClass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtfClass.Location = new System.Drawing.Point(0, 0);
+            this.rtfClass.Name = "rtfClass";
+            this.rtfClass.Size = new System.Drawing.Size(699, 487);
+            this.rtfClass.TabIndex = 0;
+            this.rtfClass.Text = "";
             // 
             // ggGroupBox2
             // 
@@ -134,31 +155,10 @@
             this.btn_ConnectString.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_ConnectString.ImageOptions.Image")));
             this.btn_ConnectString.Location = new System.Drawing.Point(6, 20);
             this.btn_ConnectString.Name = "btn_ConnectString";
-            this.btn_ConnectString.Size = new System.Drawing.Size(138, 35);
+            this.btn_ConnectString.Size = new System.Drawing.Size(114, 35);
             this.btn_ConnectString.TabIndex = 0;
-            this.btn_ConnectString.Text = "Connect Database";
+            this.btn_ConnectString.Text = "Kết nối dữ liệu";
             this.btn_ConnectString.Click += new System.EventHandler(this.btn_ConnectString_Click);
-            // 
-            // pn_genClass
-            // 
-            this.pn_genClass.AutoScroll = true;
-            this.pn_genClass.BackColor = System.Drawing.Color.White;
-            this.pn_genClass.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pn_genClass.Controls.Add(this.rtfClass);
-            this.pn_genClass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_genClass.Location = new System.Drawing.Point(235, 59);
-            this.pn_genClass.Name = "pn_genClass";
-            this.pn_genClass.Size = new System.Drawing.Size(703, 491);
-            this.pn_genClass.TabIndex = 2;
-            // 
-            // rtfClass
-            // 
-            this.rtfClass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtfClass.Location = new System.Drawing.Point(0, 0);
-            this.rtfClass.Name = "rtfClass";
-            this.rtfClass.Size = new System.Drawing.Size(699, 487);
-            this.rtfClass.TabIndex = 0;
-            this.rtfClass.Text = "";
             // 
             // frmGenerateEntity
             // 
@@ -169,13 +169,13 @@
             this.Controls.Add(this.ggGroupBox1);
             this.Name = "frmGenerateEntity";
             this.Size = new System.Drawing.Size(938, 550);
+            this.pn_genClass.ResumeLayout(false);
             this.ggGroupBox2.ResumeLayout(false);
             this.ggGroupBox2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ggGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lvTables)).EndInit();
-            this.pn_genClass.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
