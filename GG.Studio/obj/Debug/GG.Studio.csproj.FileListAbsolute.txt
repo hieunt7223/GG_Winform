@@ -215,3 +215,10 @@ E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\bin\Debug\de\DevExpress.Office
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\bin\Debug\es\DevExpress.Office.v19.1.Core.resources.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\bin\Debug\ja\DevExpress.Office.v19.1.Core.resources.dll
 E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\bin\Debug\DevExpress.Printing.v19.1.Core.xml
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\obj\Debug\GG.Studio.frmMain.resources
+E:\1.GreenGlobal\2.PROJECT\2.GG_Winform\GG.Studio\bin\Debug\DevExpress.BonusSkins.v19.1.dll
