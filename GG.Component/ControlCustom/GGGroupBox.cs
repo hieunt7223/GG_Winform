@@ -71,10 +71,10 @@ namespace GG.Component
         #endregion
 
         #region CustomControl
-        List<ADConfigColumns> listConfigColumn;
+        List<ConfigColumns> listConfigColumn;
         public GGGroupBox()
         {
-            listConfigColumn = new List<ADConfigColumns>();          
+            listConfigColumn = new List<ConfigColumns>();          
         }
 
         public virtual void InitializeControl()

@@ -159,17 +159,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configurations\AD\ADConfigColumnsConfiguration.cs" />
-    <Compile Include="Configurations\AD\ADConfigValuesConfiguration.cs" />
-    <Compile Include="Configurations\AD\ADFieldColumnsConfiguration.cs" />
-    <Compile Include="Configurations\ST\STModulesConfiguration.cs" />
-    <Compile Include="Configurations\ST\STSystemsConfiguration.cs" />
+    <Compile Include="Configurations\Studio\ConfigColumnsConfiguration.cs" />
+    <Compile Include="Configurations\Studio\ConfigValuesConfiguration.cs" />
+    <Compile Include="Configurations\Studio\FieldColumnsConfiguration.cs" />
+    <Compile Include="Configurations\Studio\ModulesConfiguration.cs" />
+    <Compile Include="Configurations\Studio\SystemsConfiguration.cs" />
     <Compile Include="EF\ContextDb.cs" />
-    <Compile Include="Entities\AD\ADConfigColumns.cs" />
-    <Compile Include="Entities\AD\ADConfigValues.cs" />
-    <Compile Include="Entities\AD\ADFieldColumns.cs" />
-    <Compile Include="Entities\ST\STModules.cs" />
-    <Compile Include="Entities\ST\STSystems.cs" />
+    <Compile Include="Entities\Studio\ConfigColumns.cs" />
+    <Compile Include="Entities\Studio\ConfigValues.cs" />
+    <Compile Include="Entities\Studio\FieldColumns.cs" />
+    <Compile Include="Entities\Studio\Modules.cs" />
+    <Compile Include="Entities\Studio\Systems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -192,6 +192,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

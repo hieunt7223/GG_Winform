@@ -6,18 +6,18 @@ using System.Data;
 using System.Linq;
 namespace GG.Repository
 {
-    public class ADConfigColumnsRepository
+    public class ConfigColumnsRepository
     {
         /// <summary>
         /// Lấy dữ liệu theo table name
         /// </summary>
         /// <param name="strTableName"></param>
         /// <returns></returns>
-        public static List<ADConfigColumns> GetDataConfigColumnsByTableName(string strTableName)
+        public static List<ConfigColumns> GetDataConfigColumnsByTableName(string strTableName)
         {
             ContextDb _context = new ContextDb();
-            var list = (from c in _context.ADConfigColumns
-                        where c.AAStatus == Status.Alive.ToString() && c.ADConfigColumnTableName == strTableName
+            var list = (from c in _context.ConfigColumns
+                        where c.Status == Status.Alive.ToString() && c.ConfigColumnTableName == strTableName
                         select c);
             return list.ToList();
         }
@@ -27,11 +27,11 @@ namespace GG.Repository
         /// </summary>
         /// <param name="strTableName"></param>
         /// <returns></returns>
-        public static List<ADConfigColumns> GetAllData()
+        public static List<ConfigColumns> GetAllData()
         {
             ContextDb _context = new ContextDb();
-            var list = (from c in _context.ADConfigColumns
-                        where c.AAStatus == Status.Alive.ToString()
+            var list = (from c in _context.ConfigColumns
+                        where c.Status == Status.Alive.ToString()
                         select c);
             return list.ToList();
         }

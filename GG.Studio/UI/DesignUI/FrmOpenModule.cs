@@ -6,7 +6,7 @@ namespace GG.Studio
     public partial class FrmOpenModule : DevExpress.XtraEditors.XtraForm
     {
         #region parameter
-        public STModules objSTModules { get; set; }
+        public Modules objModules { get; set; }
         ContextDb _Context = new ContextDb();
         #endregion
 

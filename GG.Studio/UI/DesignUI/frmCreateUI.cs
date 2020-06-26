@@ -65,7 +65,7 @@ namespace GG.Studio
         public string btnAction;
 
         ContextDb _context = new ContextDb();
-        STModules objSTModules;
+        Modules objModules;
         public int IDModule;
 
         public string PathUI;
@@ -869,7 +869,7 @@ namespace GG.Studio
                     InvalidateToolBar();
                     return;
                 }
-                objSTModules = frm.objSTModules;
+                objModules = frm.objModules;
             }
         }
 
@@ -890,7 +890,7 @@ namespace GG.Studio
                     InvalidateToolBar();
                     return;
                 }
-                objSTModules = frm.objSTModules;
+                objModules = frm.objModules;
             }
 
         }
@@ -931,11 +931,11 @@ namespace GG.Studio
                 string SaveFileName = "File_" + randNumber.ToString();
                 SaveToJson(pnControls.Controls);
 
-                objSTModules.STModuleHeight = pnControls.Height;
-                objSTModules.STModuleWidth = pnControls.Width;
+                objModules.ModuleHeight = pnControls.Height;
+                objModules.ModuleWidth = pnControls.Width;
 
-                _context.STModules.Add(objSTModules);
-                objSTModules.STModuleID = _context.SaveChanges();
+                _context.Modules.Add(objModules);
+                objModules.ModuleID = _context.SaveChanges();
 
 
                 XtraMessageBox.Show("Lưu thành công!");
@@ -952,12 +952,12 @@ namespace GG.Studio
             var fieldControl = ConvertListToJson.GetValueJsonForList(control);
             string json = SerializeObject.SerializeObjectByFieldControl(fieldControl);
             NameValueCollection appSettings = ConfigurationManager.AppSettings;
-            string path = appSettings["PathDesignUI"] + objSTModules.STModuleLink;
+            string path = appSettings["PathDesignUI"] + objModules.ModuleLink;
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
             }
-            File.WriteAllText(path + @"\" + objSTModules.STModuleNo + ".json", json);
+            File.WriteAllText(path + @"\" + objModules.ModuleNo + ".json", json);
 
         }
 
@@ -977,7 +977,7 @@ namespace GG.Studio
                     stm_Save.Enabled = true;
                     stm_Edit.Enabled = false;
                     stm_DeleteControl.Enabled = true;
-                    objSTModules = new STModules();
+                    objModules = new Modules();
                     pnControls.Controls.Clear();
                 }
                 if (btnAction == ButtonAction.btnNewByUI.ToString())
@@ -989,7 +989,7 @@ namespace GG.Studio
                     stm_Save.Enabled = true;
                     stm_Edit.Enabled = false;
                     stm_DeleteControl.Enabled = true;
-                    objSTModules = new STModules();
+                    objModules = new Modules();
                     pnControls.Controls.Clear();
                 }
                 else if (btnAction == ButtonAction.btnCancel.ToString())
@@ -1013,7 +1013,7 @@ namespace GG.Studio
                     pnControls.Controls.Clear();
                     stm_Edit.Enabled = false;
                     stm_DeleteControl.Enabled = false;
-                    objSTModules = new STModules();
+                    objModules = new Modules();
                     pnControls.Controls.Clear();
                 }
                 else if (btnAction == ButtonAction.btnSave.ToString())
@@ -1046,12 +1046,12 @@ namespace GG.Studio
                 stm_Save.Enabled = false;
                 stm_DeleteControl.Enabled = false;
                 stm_Edit.Enabled = false;
-                objSTModules = new STModules();
+                objModules = new Modules();
                 pnControls.Controls.Clear();
             }
-            if (objSTModules.STModuleID > 0)
+            if (objModules.ModuleID > 0)
             {
-                tb_thietkegiaodien.Text = "Màn hình: " + objSTModules.STModuleName;
+                tb_thietkegiaodien.Text = "Màn hình: " + objModules.ModuleName;
             }
             else
             {

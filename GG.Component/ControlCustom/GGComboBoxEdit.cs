@@ -74,10 +74,10 @@ namespace GG.Component
         #endregion
 
         #region CustomControl
-        List<ADConfigColumns> listConfigColumn;
+        List<ConfigColumns> listConfigColumn;
         public GGComboBoxEdit()
         {
-            listConfigColumn = new List<ADConfigColumns>();
+            listConfigColumn = new List<ConfigColumns>();
         }
 
         public virtual void InitializeControl()
@@ -92,17 +92,17 @@ namespace GG.Component
             //If DataMember is not empty
             if (!String.IsNullOrEmpty(strTableName) && !String.IsNullOrEmpty(strColumnName))
             {
-                listConfigColumn = ADConfigColumnsRepository.GetDataConfigColumnsByTableName(strTableName);
+                listConfigColumn = ConfigColumnsRepository.GetDataConfigColumnsByTableName(strTableName);
                 if (listConfigColumn != null && listConfigColumn.Count > 0)
                 {
-                    ADConfigColumns objConfigColumnInfo = listConfigColumn.Where(x => x.ADConfigColumnName == strColumnName).ToList().FirstOrDefault();
-                    if (objConfigColumnInfo != null && !string.IsNullOrEmpty(objConfigColumnInfo.ADConfigColumnDataSource))
+                    ConfigColumns objConfigColumnInfo = listConfigColumn.Where(x => x.ConfigColumnName == strColumnName).ToList().FirstOrDefault();
+                    if (objConfigColumnInfo != null && !string.IsNullOrEmpty(objConfigColumnInfo.ConfigColumnDataSource))
                     {
-                        if (objConfigColumnInfo.ADConfigColumnDataSource == TableName.ADConfigValuesTableName)
+                        if (objConfigColumnInfo.ConfigColumnDataSource == TableName.ADConfigValuesTableName)
                         {
-                            if (!string.IsNullOrWhiteSpace(objConfigColumnInfo.ADConfigColumnFilter))
+                            if (!string.IsNullOrWhiteSpace(objConfigColumnInfo.ConfigColumnFilter))
                             {
-                                string sqlstring = string.Format("SELECT ADConfigKeyValue,ADConfigText FROM dbo.ADConfigValues WHERE ADConfigKeyGroup=N'{0}'", objConfigColumnInfo.ADConfigColumnFilter);
+                                string sqlstring = string.Format("SELECT ADConfigKeyValue,ADConfigText FROM dbo.ADConfigValues WHERE ADConfigKeyGroup=N'{0}'", objConfigColumnInfo.ConfigColumnFilter);
                                 DataTable dt = GGRepository.SelectByQuerySQL(sqlstring);
                                 if (dt != null && dt.Rows.Count > 0)
                                 {

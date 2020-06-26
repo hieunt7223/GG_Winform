@@ -75,10 +75,10 @@ namespace GG.Component
         #endregion
 
         #region CustomControl
-        List<ADConfigColumns> listConfigColumn;
+        List<ConfigColumns> listConfigColumn;
         public GGComboBase()
         {
-            listConfigColumn = new List<ADConfigColumns>();
+            listConfigColumn = new List<ConfigColumns>();
         }
 
         public virtual void InitializeControl()
@@ -93,21 +93,21 @@ namespace GG.Component
             //If DataMember is not empty
             if (!String.IsNullOrEmpty(strTableName) && !String.IsNullOrEmpty(strColumnName))
             {
-                listConfigColumn = ADConfigColumnsRepository.GetDataConfigColumnsByTableName(strTableName);
+                listConfigColumn = ConfigColumnsRepository.GetDataConfigColumnsByTableName(strTableName);
                 if (listConfigColumn != null && listConfigColumn.Count > 0)
                 {
-                    ADConfigColumns objADConfigColumns = listConfigColumn.Where(x => x.ADConfigColumnName == strColumnName).ToList().FirstOrDefault();
-                    if (objADConfigColumns != null && !string.IsNullOrEmpty(objADConfigColumns.ADConfigColumnDataSource))
+                    ConfigColumns objConfigColumns = listConfigColumn.Where(x => x.ConfigColumnName == strColumnName).ToList().FirstOrDefault();
+                    if (objConfigColumns != null && !string.IsNullOrEmpty(objConfigColumns.ConfigColumnDataSource))
                     {
-                        if (objADConfigColumns.ADConfigColumnDataSource == TableName.ADConfigValuesTableName)
+                        if (objConfigColumns.ConfigColumnDataSource == TableName.ADConfigValuesTableName)
                         {
-                            if (!string.IsNullOrWhiteSpace(objADConfigColumns.ADConfigColumnFilter))
+                            if (!string.IsNullOrWhiteSpace(objConfigColumns.ConfigColumnFilter))
                             {
                                 this.ColumnsCaption = new string[1] { "Thông tin" };
                                 this.FieldsName = new string[1] { ADConfigValueColumn.ADConfigText.ToString() };
                                 this.DisplayMember = ADConfigValueColumn.ADConfigText.ToString();
                                 this.ValueMember = ADConfigValueColumn.ADConfigKeyValue.ToString();
-                                string sqlstring = string.Format("SELECT ADConfigKeyValue,ADConfigText FROM dbo.ADConfigValues WHERE ADConfigKeyGroup=N'{0}'", objADConfigColumns.ADConfigColumnFilter);
+                                string sqlstring = string.Format("SELECT ADConfigKeyValue,ADConfigText FROM dbo.ADConfigValues WHERE ADConfigKeyGroup=N'{0}'", objConfigColumns.ConfigColumnFilter);
                                 DataTable dt = GGRepository.SelectByQuerySQL(sqlstring);
                                 if (dt != null && dt.Rows.Count > 0)
                                 {
@@ -119,23 +119,23 @@ namespace GG.Component
                         }
                         else
                         {
-                            List<ADConfigColumns> listConfigColumnRef = ADConfigColumnsRepository.GetDataConfigColumnsByTableName(objADConfigColumns.ADConfigColumnDataSource.ToString().Trim());
+                            List<ConfigColumns> listConfigColumnRef = ConfigColumnsRepository.GetDataConfigColumnsByTableName(objConfigColumns.ConfigColumnDataSource.ToString().Trim());
                             if (listConfigColumnRef != null && listConfigColumnRef.Count > 0)
                             {
 
-                                if (!string.IsNullOrWhiteSpace(objADConfigColumns.ADConfigColumnDisplayMember))
+                                if (!string.IsNullOrWhiteSpace(objConfigColumns.ConfigColumnDisplayMember))
                                 {
-                                    string[] split = objADConfigColumns.ADConfigColumnDisplayMember.ToString().Split(';');
+                                    string[] split = objConfigColumns.ConfigColumnDisplayMember.ToString().Split(';');
                                     if (split != null && split.Count() > 0)
                                     {
                                         string[] stringColumnsCaption = new String[split.Count()];
                                         string[] stringFieldsName = new String[split.Count()];
                                         for (int i = 0; i < split.Count(); i++)
                                         {
-                                            ADConfigColumns objConfigColumnInRef = listConfigColumnRef.Where(x => x.ADConfigColumnName == split[i].ToString().Trim()).ToList().FirstOrDefault();
+                                            ConfigColumns objConfigColumnInRef = listConfigColumnRef.Where(x => x.ConfigColumnName == split[i].ToString().Trim()).ToList().FirstOrDefault();
                                             if (objConfigColumnInRef != null)
                                             {
-                                                stringColumnsCaption[i] = objConfigColumnInRef.ADConfigColumnCaption;
+                                                stringColumnsCaption[i] = objConfigColumnInRef.ConfigColumnCaption;
                                             }
                                             else
                                             {
@@ -150,24 +150,24 @@ namespace GG.Component
 
                                     else
                                     {
-                                        ADConfigColumns objConfigColumnInRef = listConfigColumnRef.Where(x => x.ADConfigColumnName == objADConfigColumns.ADConfigColumnDisplayMember.ToString()).ToList().FirstOrDefault();
+                                        ConfigColumns objConfigColumnInRef = listConfigColumnRef.Where(x => x.ConfigColumnName == objConfigColumns.ConfigColumnDisplayMember.ToString()).ToList().FirstOrDefault();
                                         if (objConfigColumnInRef != null)
                                         {
-                                            this.ColumnsCaption = new string[1] { objConfigColumnInRef.ADConfigColumnCaption.ToString().Trim() };
+                                            this.ColumnsCaption = new string[1] { objConfigColumnInRef.ConfigColumnCaption.ToString().Trim() };
                                         }
                                         else
                                         {
-                                            this.ColumnsCaption = new string[1] { objADConfigColumns.ADConfigColumnDisplayMember.ToString().Trim() };
+                                            this.ColumnsCaption = new string[1] { objConfigColumns.ConfigColumnDisplayMember.ToString().Trim() };
                                         }
 
-                                        this.FieldsName = new string[1] { objADConfigColumns.ADConfigColumnDisplayMember.ToString().Trim() };
-                                        this.DisplayMember = objADConfigColumns.ADConfigColumnDisplayMember.ToString().Trim();
+                                        this.FieldsName = new string[1] { objConfigColumns.ConfigColumnDisplayMember.ToString().Trim() };
+                                        this.DisplayMember = objConfigColumns.ConfigColumnDisplayMember.ToString().Trim();
                                     }
                                 }
                             }
 
-                            this.ValueMember = objADConfigColumns.ADConfigColumnValueMember.ToString().Trim();
-                            DataTable dt = ADConfigColumnsRepository.SelectValueBySQLQueryString(objADConfigColumns.ADConfigColumnDisplayMember, objADConfigColumns.ADConfigColumnValueMember, objADConfigColumns.ADConfigColumnDataSource, objADConfigColumns.ADConfigColumnFilter);
+                            this.ValueMember = objConfigColumns.ConfigColumnValueMember.ToString().Trim();
+                            DataTable dt = ConfigColumnsRepository.SelectValueBySQLQueryString(objConfigColumns.ConfigColumnDisplayMember, objConfigColumns.ConfigColumnValueMember, objConfigColumns.ConfigColumnDataSource, objConfigColumns.ConfigColumnFilter);
                             if (dt != null && dt.Rows.Count > 0)
                             {
                                 this.DataSource = dt;

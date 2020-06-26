@@ -12,7 +12,7 @@ namespace GG.Studio
     public partial class frmAddModule : DevExpress.XtraEditors.XtraForm
     {
         #region parameter
-        public STModules objSTModules { get; set; }
+        public Modules objModules { get; set; }
         ContextDb _Context = new ContextDb();
         #endregion
 
@@ -39,36 +39,36 @@ namespace GG.Studio
                 Functions.ShowMessage("Vui lòng nhập mã giao diện");
                 return;
             }
-            else if (_Context.STModules.ToList().Where(x => x.STModuleNo == txt_STModuleNo.EditValue.ToString().Trim()).ToList().Count() > 0)
+            else if (_Context.Modules.ToList().Where(x => x.ModuleNo == txt_STModuleNo.EditValue.ToString().Trim()).ToList().Count() > 0)
             {
                 Functions.ShowMessage("Mã giao diện đã trùng, Vui lòng kiểm tra lại");
                 return;
             }
-            objSTModules = new STModules();
-            objSTModules.AAStatus = Status.Alive.ToString();
-            objSTModules.FK_STSystemID = cbb_STSystemID.EditValue == null ? 0 : Convert.ToInt32(cbb_STSystemID.EditValue.ToString());
-            objSTModules.STModuleParentID = cbb_STModuleID.EditValue == null ? 0 : Convert.ToInt32(cbb_STModuleID.EditValue.ToString());
-            objSTModules.STModuleNo = txt_STModuleNo.EditValue.ToString();
-            objSTModules.STModuleName = txt_STModuleName.EditValue.ToString();
+            objModules = new Modules();
+            objModules.Status = Status.Alive.ToString();
+            objModules.FK_SystemID = cbb_STSystemID.EditValue == null ? 0 : Convert.ToInt32(cbb_STSystemID.EditValue.ToString());
+            objModules.ModuleParentID = cbb_STModuleID.EditValue == null ? 0 : Convert.ToInt32(cbb_STModuleID.EditValue.ToString());
+            objModules.ModuleNo = txt_STModuleNo.EditValue.ToString();
+            objModules.ModuleName = txt_STModuleName.EditValue.ToString();
             string link = string.Empty;
 
-            STSystems objSTSystems = _Context.STSystems.ToList().Where(x => x.STSystemID == objSTModules.FK_STSystemID).ToList().FirstOrDefault();
-            if (objSTSystems.STSystemID > 0)
+            Systems objSTSystems = _Context.Systems.ToList().Where(x => x.SystemID == objModules.FK_SystemID).ToList().FirstOrDefault();
+            if (objSTSystems.SystemID > 0)
             {
-                link = objSTSystems.STSystemNo + @"\";
+                link = objSTSystems.SystemNo + @"\";
             }
 
-            if (objSTModules.STModuleParentID != 0)
+            if (objModules.ModuleParentID != 0)
             {
-                STModules objInfo = _Context.STModules.ToList().Where(x => x.STModuleID == objSTModules.STModuleParentID).ToList().FirstOrDefault();
-                if (objInfo.STModuleID > 0)
-                    link += objInfo.STModuleNo + @"\";
+                Modules objInfo = _Context.Modules.ToList().Where(x => x.ModuleID == objModules.ModuleParentID).ToList().FirstOrDefault();
+                if (objInfo.ModuleID > 0)
+                    link += objInfo.ModuleNo + @"\";
             }
             else
             {
-                link += objSTModules.STModuleNo + @"\";
+                link += objModules.ModuleNo + @"\";
             }
-            objSTModules.STModuleLink = link;
+            objModules.ModuleLink = link;
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

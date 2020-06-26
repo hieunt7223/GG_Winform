@@ -142,7 +142,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider\GGRepository.cs" />
-    <Compile Include="Repository\AD\ADConfigColumnsRepository.cs" />
+    <Compile Include="Repository\Studio\ConfigColumnsRepository.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

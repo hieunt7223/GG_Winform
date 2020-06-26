@@ -12,28 +12,23 @@ namespace GG.Entity
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            #region ST
-            modelBuilder.ApplyConfiguration(new STSystemsConfiguration());
-            modelBuilder.ApplyConfiguration(new STModulesConfiguration());
-            #endregion
-
-            #region AD
-            modelBuilder.ApplyConfiguration(new ADConfigColumnsConfiguration());
-            modelBuilder.ApplyConfiguration(new ADConfigValuesConfiguration());
-            modelBuilder.ApplyConfiguration(new ADFieldColumnsConfiguration());
+            #region Studio
+            modelBuilder.ApplyConfiguration(new SystemsConfiguration());
+            modelBuilder.ApplyConfiguration(new ModulesConfiguration());
+            modelBuilder.ApplyConfiguration(new ConfigColumnsConfiguration());
+            modelBuilder.ApplyConfiguration(new ConfigValuesConfiguration());
+            modelBuilder.ApplyConfiguration(new FieldColumnsConfiguration());
             #endregion
         }
 
-        #region ST
-        public DbSet<STSystems> STSystems { get; set; }
-        public DbSet<STModules> STModules { get; set; }
+        #region Studio
+        public DbSet<Systems> Systems { get; set; }
+        public DbSet<Modules> Modules { get; set; }
+        public DbSet<ConfigColumns> ConfigColumns { get; set; }
+        public DbSet<ConfigValues> ConfigValues { get; set; }
+        public DbSet<FieldColumns> FieldColumns { get; set; }
         #endregion
 
-        #region AD
-        public DbSet<ADConfigColumns> ADConfigColumns { get; set; }
-        public DbSet<ADConfigValues> ADConfigValues { get; set; }
-        public DbSet<ADFieldColumns> ADFieldColumns { get; set; }
-        #endregion
     }
 
 }
